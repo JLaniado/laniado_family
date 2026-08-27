@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Genealogical Records — The Laniado Family</title>
+<meta name="description" content="Additional documented members of the Laniado family, drawn from gravestone and archival records in Aleppo, Damascus, and Baghdad.">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  table.records { width: 100%; border-collapse: collapse; margin: 1rem 0 2rem; background: #fff; border: 1px solid var(--border); }
+  table.records th, table.records td { padding: 0.6rem 0.9rem; text-align: left; border-bottom: 1px solid var(--border); font-size: 0.95rem; }
+  table.records th { background: var(--parchment-dark); color: var(--maroon-dark); cursor: pointer; user-select: none; white-space: nowrap; }
+  table.records th:hover { color: var(--maroon); }
+  table.records th .arrow { font-size: 0.75em; color: var(--gold); margin-left: 0.3rem; }
+  table.records tr:hover td { background: var(--parchment-dark); }
+  table.records td.heb { font-family: var(--hebrew); direction: rtl; text-align: right; }
+  .table-controls { margin: 1rem 0; }
+  .table-controls input {
+    font-family: var(--serif);
+    font-size: 0.95rem;
+    padding: 0.5rem 0.8rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    width: 100%;
+    max-width: 320px;
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <div class="brand">
+      <span class="en">The Laniado Family</span>
+      <span class="he">משפחת לניאדו</span>
+    </div>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="rabbis/index.html">The Chief Rabbis</a>
+      <a href="family-tree.html">Family Tree</a>
+      <a href="anecdotes.html">Anecdotes</a>
+      <a href="sifrei-kodesh.html">Sifrei Kodesh</a>
+      <a href="diaspora.html">The Diaspora</a>
+      <a href="hospital.html">Laniado Hospital</a>
+      <a href="records.html" class="active">Records</a>
+      <a href="sources.html">Sources</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wide">
+  <p class="crumbs"><a href="index.html">Home</a> / Genealogical Records</p>
+
+  <h1 class="section-title" style="margin-top:0;">Genealogical Records</h1>
+  <div class="lede-block">
+    <p>
+      Beyond the Chief Rabbis and the branches shown in the <a href="family-tree.html">Family
+      Tree</a>, family and archival sources document dozens more Laniados — named in sefarim,
+      letters, and above all in the gravestones Chacham David Ben Tzion Laniado copied down on his
+      trips back to Aleppo. For most of these individuals, only a name, a year of passing, and a
+      city survive. They are recorded here as raw genealogical data rather than narrative — a
+      starting point for family members researching their own line.
+    </p>
+  </div>
+
+  <div class="table-controls">
+    <input type="text" id="filter-input" placeholder="Filter by name or city…" oninput="filterTable()">
+  </div>
+
+  <div style="overflow-x:auto;">
+  <table class="records" id="records-table">
+    <thead>
+      <tr>
+        <th onclick="sortTable(0)">Name (Hebrew) <span class="arrow">⇅</span></th>
+        <th onclick="sortTable(1)">Year of Passing <span class="arrow">⇅</span></th>
+        <th onclick="sortTable(2)">City <span class="arrow">⇅</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td class="heb">ר׳ ישעיה לניאדו</td><td>1722</td><td>Aleppo</td></tr>
+      <tr><td class="heb">ר׳ עזרא אל-זגי׳ר לניאדו</td><td>1865</td><td>Aleppo</td></tr>
+      <tr><td class="heb">ר׳ אברהם לניאדו</td><td>1872</td><td>Aleppo</td></tr>
+      <tr><td class="heb">ר׳ ציון יצחק לניאדו</td><td>1875</td><td>Aleppo</td></tr>
+      <tr><td class="heb">ר׳ אליהו לניאדו</td><td>1827</td><td>Damascus</td></tr>
+      <tr><td class="heb">ר׳ אליהו לניאדו</td><td>1869</td><td>Damascus</td></tr>
+      <tr><td class="heb">ר׳ אליהו לניאדו</td><td>1889</td><td>Damascus</td></tr>
+      <tr><td class="heb">ר׳ אליהו לניאדו</td><td>1885</td><td>Aleppo</td></tr>
+      <tr><td class="heb">ר׳ יעקב לניאדו</td><td>1889</td><td>Damascus</td></tr>
+      <tr><td class="heb">ר׳ בכור רפאל לניאדו</td><td>1867</td><td>Aleppo</td></tr>
+      <tr><td class="heb">ר׳ חיים משה לניאדו</td><td>1898</td><td>Aleppo</td></tr>
+      <tr><td class="heb">ר׳ יהודה לניאדו</td><td>1902</td><td>Aleppo</td></tr>
+      <tr><td class="heb">ר׳ יצחק לניאדו</td><td>1915</td><td>Aleppo</td></tr>
+      <tr><td class="heb">ר׳ יוסף חיים לניאדו</td><td>1840</td><td>Damascus</td></tr>
+      <tr><td class="heb">ר׳ עובדיה לניאדו</td><td>1909</td><td>Aleppo</td></tr>
+      <tr><td class="heb">ר׳ שלמה לניאדו</td><td>1919</td><td>Aleppo</td></tr>
+      <tr><td class="heb">ר׳ שלמה רפאל שמעון לניאדו</td><td>1947</td><td>Aleppo</td></tr>
+      <tr><td class="heb">ר׳ שלמה משה לניאדו</td><td>1938</td><td>Baghdad</td></tr>
+      <tr><td class="heb">ר׳ משה ״דיב״ לניאדו</td><td>1892</td><td>Aleppo</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p style="font-size:0.85rem;color:var(--ink-soft);">
+    These are documented as brothers, sons, or grandchildren of the rabbis profiled elsewhere on
+    this site, quoted in sefarim and letters — but without further biographical detail preserved
+    beyond their year of passing and city. Click a column header to sort; use the filter box to
+    search by city.
+  </p>
+
+  <div class="placeholder-note">
+    Recognize a name here, or have a date, city, or relationship to add? See
+    <a href="sources.html">Sources &amp; Contribute</a>.
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <p>Source: gravestone records and family letters compiled by Chacham David Ben Tzion Laniado in <span class="heb">לקדושים אשר בארץ</span>.</p>
+</footer>
+
+<script>
+  let sortState = {};
+  function sortTable(col) {
+    const table = document.getElementById('records-table');
+    const tbody = table.tBodies[0];
+    const rows = Array.from(tbody.rows);
+    const asc = !(sortState[col]);
+    sortState = {};
+    sortState[col] = asc;
+    rows.sort((a, b) => {
+      let x = a.cells[col].innerText.trim();
+      let y = b.cells[col].innerText.trim();
+      if (col === 1) { x = parseInt(x, 10); y = parseInt(y, 10); return asc ? x - y : y - x; }
+      return asc ? x.localeCompare(y, 'he') : y.localeCompare(x, 'he');
+    });
+    rows.forEach(r => tbody.appendChild(r));
+  }
+  function filterTable() {
+    const q = document.getElementById('filter-input').value.trim().toLowerCase();
+    const rows = document.querySelectorAll('#records-table tbody tr');
+    rows.forEach(row => {
+      const text = row.innerText.toLowerCase();
+      row.style.display = text.includes(q) ? '' : 'none';
+    });
+  }
+</script>
+
+</body>
+</html>
