@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Family Tree — The Laniado Family</title>
+<meta name="description" content="An interactive family tree of the Laniado family, from Shmuel Laniado HaRishon in 16th-century Aleppo to the family's branches in Israel, Brazil, Italy, and the United States.">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <div class="brand">
+      <span class="en">The Laniado Family</span>
+      <span class="he">משפחת לניאדו</span>
+    </div>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="rabbis/index.html">The Chief Rabbis</a>
+      <a href="family-tree.html" class="active">Family Tree</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wide">
+  <p class="crumbs"><a href="index.html">Home</a> / Family Tree</p>
+
+  <h1 class="section-title" style="margin-top:0;">Family Tree</h1>
+  <div class="lede-block">
+    <p>
+      This tree traces the Laniado family from <strong>Shmuel Laniado HaRishon</strong>, who fled
+      Spain around the 1492 expulsion, down through the eight generations of Chief Rabbis of
+      Aleppo, and onward through the branch that reached the Land of Israel and produced
+      <strong>Chacham David Ben Tzion Laniado</strong> — whose own children scattered to Israel,
+      Brazil, Italy, and the United States.
+    </p>
+    <p>
+      <strong>Hover</strong> over any name for a short summary, or <strong>click</strong> a
+      highlighted name to open its full profile page. Several relationships in the earliest
+      generations are noted as uncertain in the sources themselves — this tree follows the family's
+      own account in <span class="heb">כסא שלמה</span> and <span class="heb">לקדושים אשר בארץ</span>.
+    </p>
+  </div>
+
+  <div class="tree-legend">
+    <span><span class="swatch" style="background:#4a1414;"></span>Family founder</span>
+    <span><span class="swatch" style="background:#fbf1dd;border:1px solid #6e1f1f;"></span>Chief Rabbi of Aleppo</span>
+    <span><span class="swatch" style="background:#fff;border:1px solid #a9822f;"></span>Other family member</span>
+  </div>
+
+  <div class="tree-wrap">
+    <div id="tree-container"></div>
+  </div>
+
+  <p style="font-size:0.85rem;color:var(--ink-soft);">
+    Tip: this tree is wide — scroll horizontally within the frame above to see every branch.
+  </p>
+
+  <h2 class="section-title">A Primary Source</h2>
+  <div class="two-col">
+    <div>
+      <p>
+        The image at right is a genealogical chart from the family's own history,
+        <span class="heb">לקדושים אשר בארץ</span> ("To the Holy Ones Who Are in the Land"),
+        compiled by Chacham David Ben Tzion Laniado. It traces the same succession shown in the
+        interactive tree above, in the family's own hand and numbering.
+      </p>
+      <p style="font-size:0.9rem;color:var(--ink-soft);">
+        Where this chart and the family's other written records differ slightly on names or
+        generations, this site follows the fuller prose account — noted on each profile page.
+      </p>
+    </div>
+    <figure class="portrait" style="margin:0;">
+      <img src="assets/images/family-tree-manuscript.png" alt="Handwritten Hebrew genealogical chart of the Laniado family, from Lekedoshim Asher Ba'aretz" style="max-width:100%;">
+      <figcaption><span class="heb">שושלת משפחת לניאדו</span> — the family's own chart, from Lekedoshim Asher Ba'aretz</figcaption>
+    </figure>
+  </div>
+
+</main>
+
+<div id="tree-tooltip" class="tree-tooltip"></div>
+
+<footer class="site-footer">
+  <p>Genealogy compiled from <span class="heb">כסא שלמה</span>, <span class="heb">לקדושים אשר בארץ</span>
+  ("Aleppo, City of Scholars"), and family testimony. Corrections and additions from family
+  members are welcome as this site grows.</p>
+</footer>
+
+<script src="assets/js/tree.js"></script>
+</body>
+</html>
